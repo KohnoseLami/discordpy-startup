@@ -28,6 +28,7 @@ async def on_message(message):
         return
     if message.channel.id == 752892157995647006:
         api.update_status(message.content)
+        await message.channel.send('ツイートしました:「' + message.content + '」')
 
 
 bot.run(token)
