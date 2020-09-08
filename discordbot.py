@@ -12,6 +12,9 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send('pong')
 
 @client.event
 async def on_message(message):
@@ -19,7 +22,7 @@ async def on_message(message):
     if message.author.bot:
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
-    else:
+    if message:
         await message.channel.send(message)
 
 
