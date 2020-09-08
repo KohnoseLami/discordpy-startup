@@ -19,7 +19,8 @@ async def on_message(message):
     if message.author.bot:
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
-    await message.channel.send(message)
+    else:
+        await message.channel.send(message)
 
 
 bot.run(token)
