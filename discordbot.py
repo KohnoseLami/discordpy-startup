@@ -5,10 +5,10 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-consumer_key = "3rJOl1ODzm9yZy63FACdg"
-consumer_secret = "5jPoQ5kQvMJFDYRNE8bQ4rHuds4xJqhvgNJM4awaE8"
-access_key = "1102213133123244032-icdOhshoUWDd0pDKB0j1liJ8EW1Tu6"
-access_secret = "AuRa4i2ArNBK6miufT4DotkrsQDHdU1bjyVvLmySej0gf"
+consumer_key = os.environ['consumer_key']
+consumer_secret = os.environ['consumer_secret']
+access_key = os.environ['access_key']
+access_secret = os.environ['access_secret']
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
